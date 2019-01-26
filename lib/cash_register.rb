@@ -22,6 +22,7 @@ class CashRegister
     end
   end
   def void_last_transaction
+    title, price, quantity = last_transaction[0], last_transaction[1], last_transaction[2]
     @total -= price * quantity
     quantity.times do
       @items << title
