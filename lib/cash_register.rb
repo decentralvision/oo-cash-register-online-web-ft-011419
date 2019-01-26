@@ -25,7 +25,7 @@ class CashRegister
     title, price, quantity = last_transaction[0], last_transaction[1], last_transaction[2]
     @total -= price * quantity
     quantity.times do
-      @items << title
+      @items.slice!(-1)
     end
   end
 end
