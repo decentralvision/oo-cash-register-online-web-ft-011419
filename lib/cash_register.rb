@@ -22,6 +22,9 @@ class CashRegister
     end
   end
   def void_last_transaction
-
+    @total -= price * quantity
+    quantity.times do
+      @items << title
+    end
   end
 end
